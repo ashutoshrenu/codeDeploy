@@ -8,8 +8,8 @@ files:
 permission:
   - object: /var/www/html
     pattern: index.html
-    owner: ubuntu
-    group: ubuntu
+    owner: root
+    group: root
     mode: 755
     type:
       - file
