@@ -5,19 +5,12 @@ files:
   - source: index.html
     destination: /var/www/html
 
-permission:
-  - object: /var/www/html
-    pattern: index.html
-    owner: root
-    group: root
-    mode: 755
-    type:
-      - file
-
 hooks:
   BeforeInstall:
     - location: server/stop.sh
     - location: server/delete-old.sh
+      runas: root
   AfterInstall:
     - location: server/sleep.sh
     - location: server/start.sh
+      runas: root
