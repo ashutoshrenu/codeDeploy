@@ -17,6 +17,8 @@
 
 if [ "$DEPLOYMENT_GROUP_NAME" == "autoscale" ]; then
 
+sudo rm -rf /var/www/html/application/config.html
+
 msg "Running AWS CLI with region: $(get_instance_region)"
 
 # get this instance's ID
