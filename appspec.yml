@@ -18,7 +18,6 @@ hooks:
     - location: server/stop.sh
       runas: root
   AfterInstall:
-    - location: server/config.sh
     - location: server/sleep.sh
     - location: server/start.sh
     - location: server/register_with_elb.sh
