@@ -7,10 +7,11 @@ files:
 
 hooks:
   BeforeInstall:
+    - location: server/deregister_from_elb.sh
     - location: server/stop.sh
-    - location: server/delete-old.sh
       runas: root
   AfterInstall:
     - location: server/sleep.sh
     - location: server/start.sh
+    - location: server/register_with_elb.sh
       runas: root
