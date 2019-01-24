@@ -15,6 +15,8 @@
 
 . $(dirname $0)/common_functions.sh
 
+if [ "$DEPLOYMENT_GROUP_NAME" == "autoscale" ]; then
+
 msg "Running AWS CLI with region: $(get_instance_region)"
 
 # get this instance's ID
@@ -113,3 +115,5 @@ done
 remove_flagfile
 
 finish_msg
+
+fi
