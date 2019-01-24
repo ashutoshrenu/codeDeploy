@@ -117,5 +117,5 @@ remove_flagfile
 finish_msg
 else
     sudo rm -rf /var/www/html/application/config.html
-    sudo cp /var/www/backup/config.html /var/www/html/
+    sudo cp /var/www/backup/config.html /var/www/html/application/
 fi
