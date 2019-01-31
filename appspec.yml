@@ -14,7 +14,7 @@ permissions:
       - file
 hooks:
   BeforeInstall:
-    #- location: server/delete-old.sh
+    - location: server/delete-old.sh
     - location: server/deregister_from_elb.sh
     - location: server/stop.sh
 
